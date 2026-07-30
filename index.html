@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>RAMPED × Sweatcoin — Creator Growth for Move-to-Earn · United States · United Kingdom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4EEDF; --cream2:#EFE6D3; --card:#FFFFFF;
+  --ink:#45413A; --soft:#736C5F; --faint:#9A9183;
+  --teal:#7A3FF2; --teal2:#6320D6; --tealdk:#0F002B;
+  --orange:#F68237; --orange2:#F89E5E;
+  --plum:#C06779; --plum2:#D0879A;
+  --line:rgba(69,65,58,.12); --line2:rgba(69,65,58,.07);
+  --bad:#45413A; --slow:#CFC6B2; --good:#F68237; --out:#7A3FF2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Nunito',sans-serif;font-weight:900;line-height:1.05;letter-spacing:-.01em}
+em{font-style:italic;color:var(--teal2);font-weight:900}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+a{color:var(--teal2);text-decoration:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,238,223,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Nunito';font-weight:900;font-size:18px}
+.ring{width:24px;height:24px;border-radius:50%;border:5px solid var(--teal);border-top-color:rgba(122,63,242,.25);transform:rotate(40deg)}
+.navlinks{display:flex;gap:18px;font-size:14px;font-weight:600}
+.navlinks a{color:var(--soft)} .navlinks a:hover{color:var(--ink)}
+.tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+@media(max-width:980px){.navlinks{display:none}}
+
+/* SECTIONS */
+section{padding:84px 0;border-bottom:1px solid var(--line2)}
+.kick{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal2);margin-bottom:18px}
+h2{font-size:clamp(30px,4.6vw,50px);margin-bottom:22px;max-width:20ch}
+.lead{font-size:19px;color:var(--soft);max-width:64ch;margin-bottom:8px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:1fr 1fr} .g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{font-size:15.5px;color:var(--soft)}
+
+/* HERO */
+.hero{background:linear-gradient(165deg,#F4EEDF 0%,#ECE4FB 100%);padding:64px 0 90px;border-bottom:none}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}}
+.flags{display:inline-flex;gap:8px;margin-bottom:16px}
+.flag{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:30px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);margin:0 0 22px}
+.hero p{font-size:19px;color:var(--soft);max-width:54ch}
+.metabar{display:flex;flex-wrap:wrap;gap:26px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.metabar div{min-width:90px}
+.metabar .n{font-family:'Nunito';font-weight:900;font-size:20px}
+.metabar .l{font-size:12px;color:var(--faint);font-weight:600}
+.fastcard{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:30px 26px;box-shadow:0 24px 60px -30px rgba(122,63,242,.4)}
+
+.note{background:var(--cream2);border-left:4px solid var(--teal);border-radius:0 12px 12px 0;padding:18px 22px;font-size:16px;color:#5c554a;margin-top:8px}
+.note b{color:var(--ink)}
+.note.orange{border-left-color:var(--orange)}
+
+/* offer banner */
+.offer{background:linear-gradient(150deg,#1A0740,#6320D6);color:#fff;border-radius:24px;padding:38px 40px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;box-shadow:0 24px 60px -34px rgba(122,63,242,.55)}
+@media(max-width:760px){.offer{grid-template-columns:1fr;text-align:center}}
+.offer .big{font-family:'Nunito';font-weight:900;font-size:54px;line-height:.95;color:#fff;white-space:nowrap}
+.offer .big small{display:block;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D8CBF5;margin-top:6px}
+.offer h3{font-family:'Nunito';font-weight:900;font-size:24px;color:#fff;margin-bottom:8px}
+.offer p{color:#E1D6F7;font-size:16px;max-width:60ch}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.step .num{font-family:'Nunito';font-weight:900;font-size:14px;color:#fff;background:var(--teal2);width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step h4{font-family:'Nunito';font-weight:800;font-size:16px;margin-bottom:6px}
+.step p{font-size:13.5px;color:var(--soft)}
+
+/* plan cards visual */
+.plans{display:flex;gap:14px;flex-wrap:wrap}
+.plan{flex:1;min-width:150px;border-radius:18px;padding:20px;color:#fff;font-family:'Nunito';font-weight:900;font-size:19px;min-height:120px;display:flex;align-items:flex-end;box-shadow:0 14px 30px -18px rgba(0,0,0,.4)}
+.plan small{display:block;font-family:'Inter';font-weight:600;font-size:12px;opacity:.9;margin-bottom:4px}
+.p1{background:linear-gradient(150deg,#9B6BF5,#6320D6)}
+.p2{background:linear-gradient(150deg,#F89E5E,#E07414)}
+.p3{background:linear-gradient(150deg,#D0879A,#B0526E)}
+
+/* building blocks panel */
+.stages{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 28px}
+.stage{display:flex;align-items:center;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.stage:last-child{border-bottom:none}
+.stage .ic{flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(122,63,242,.14)}
+.stage.k .ic{background:rgba(192,103,121,.18)}
+.stage.a .ic{background:var(--cream2)}
+.stage .t{flex:1}
+.stage .t b{font-family:'Nunito';font-weight:800;font-size:15.5px}
+.stage .t span{font-size:13px;color:var(--soft);display:block}
+.stage .h{font-family:'Nunito';font-weight:900;font-size:14px;color:var(--teal2)}
+
+/* tiers */
+.tier{display:flex;align-items:center;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:12px}
+.tier .bar{flex:none;border-radius:10px;height:54px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Nunito';font-weight:900;font-size:13px;text-align:center;line-height:1.1;padding:0 6px}
+.tier .meta{flex:1}
+.tier h4{font-family:'Nunito';font-weight:800;font-size:17px;margin-bottom:2px}
+.tier p{font-size:14px;color:var(--soft)}
+.tier .role{font-size:12px;font-weight:700;color:var(--teal2);text-transform:uppercase;letter-spacing:.06em}
+
+/* angles */
+.angle{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.angle .az{font-family:'Nunito';font-weight:900;color:var(--orange);font-size:15px;margin-bottom:8px}
+.angle h4{font-family:'Nunito';font-weight:800;font-size:16.5px;margin-bottom:8px}
+.angle p{font-size:14px;color:var(--soft);margin-bottom:12px}
+.angle .quote{font-size:13.5px;font-style:italic;color:var(--ink);background:var(--cream2);border-radius:10px;padding:10px 14px}
+
+/* months / donuts */
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.months{grid-template-columns:1fr}}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}
+.mcard .mh{font-family:'Nunito';font-weight:900;font-size:18px;margin-bottom:2px}
+.mcard .ms{font-size:13px;color:var(--soft);margin-bottom:10px;min-height:34px}
+.donut{position:relative;width:160px;height:160px;margin:0 auto}
+.donut .dc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut .dc b{font-family:'Nunito';font-weight:900;font-size:24px;color:var(--teal2);line-height:1}
+.donut .dc span{font-size:10.5px;color:var(--faint);font-weight:600;max-width:80px}
+.mcard .out{margin-top:14px;font-size:13px;color:var(--soft)}
+.mcard .out b{font-family:'Nunito';font-weight:900;font-size:26px;color:var(--ink);display:block;line-height:1}
+.legend{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:24px;font-size:13px;color:var(--soft);font-weight:600}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:12px;height:12px;border-radius:4px;display:inline-block}
+
+/* tables */
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14.5px}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line2)}
+th{background:var(--cream2);font-family:'Nunito';font-weight:800;font-size:13px;color:var(--ink)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+.hl td{background:rgba(122,63,242,.07);font-weight:700}
+
+/* guarantee / terms */
+.guar{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:820px){.guar{grid-template-columns:1fr}}
+.gcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;position:relative;overflow:hidden}
+.gcard .gi{font-size:30px;margin-bottom:12px;display:block}
+.gcard h3{font-family:'Nunito';font-weight:900;font-size:21px;margin-bottom:14px}
+.gcard ul{list-style:none}
+.gcard li{font-size:15px;color:var(--soft);padding:9px 0 9px 30px;position:relative;border-top:1px solid var(--line2)}
+.gcard li:first-child{border-top:none}
+.gcard li:before{content:"✓";position:absolute;left:0;top:9px;color:var(--teal2);font-weight:900}
+.gcard li b{color:var(--ink)}
+.gcard.fire{background:linear-gradient(165deg,#fff,#FFF3E6)}
+.gcard.fire li:before{color:var(--good)}
+
+/* MARKET BLOCKS */
+.mkt-hd{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.mkt-hd .fg{font-size:40px;line-height:1}
+.mkt-hd .role{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.mkt-hd h2{margin:0;font-size:clamp(28px,4vw,44px)}
+.mkstat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}
+@media(max-width:820px){.mkstat{grid-template-columns:1fr 1fr}}
+.mkstat .b{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 16px;text-align:center}
+.mkstat .b .n{font-family:'Nunito';font-weight:900;font-size:28px;line-height:1}
+.mkstat .b .l{font-size:12px;color:var(--soft);font-weight:600;margin-top:6px}
+.opt{background:var(--card);border:2px solid var(--teal);border-radius:22px;padding:32px;position:relative}
+.opt .badge{position:absolute;top:-13px;left:32px;font-family:'Nunito';font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--teal2);padding:5px 14px;border-radius:20px}
+.opt h3{font-family:'Nunito';font-weight:900;font-size:23px;margin:6px 0 2px}
+.opt .mkt{font-size:13px;font-weight:700;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+.opt .price{font-family:'Nunito';font-weight:900;font-size:40px;line-height:1}
+.opt .price small{font-size:16px;color:var(--soft);font-weight:700}
+.opt .total{font-size:15px;color:var(--soft);margin-top:8px}
+.opt .total b{color:var(--ink)}
+.opt ul{list-style:none;margin:20px 0 0;border-top:1px solid var(--line);padding-top:18px}
+.opt li{font-size:14.5px;color:var(--soft);padding:6px 0 6px 26px;position:relative}
+.opt li:before{content:"";position:absolute;left:0;top:12px;width:13px;height:13px;border-radius:50%;background:rgba(122,63,242,.2)}
+.opt li b{color:var(--ink)}
+.savetag{display:inline-block;background:var(--plum);color:#fff;font-family:'Nunito';font-weight:900;font-size:12px;padding:4px 12px;border-radius:20px;margin-left:8px;vertical-align:middle}
+.barwrap{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px}
+.barwrap h4{font-family:'Nunito';font-weight:900;font-size:16px;margin-bottom:18px}
+.bchart{display:flex;align-items:flex-end;gap:26px;height:200px;padding:0 8px;border-bottom:2px solid var(--line)}
+.bcol{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bcol .bb{width:100%;max-width:96px;border-radius:10px 10px 0 0;display:flex;align-items:flex-start;justify-content:center;color:#fff;font-family:'Nunito';font-weight:900;font-size:15px;padding-top:10px}
+.bcol .bl{margin-top:10px;font-family:'Nunito';font-weight:800;font-size:14px}
+.bcol .bs{font-size:12px;color:var(--soft)}
+
+/* proof */
+.proof{background:var(--ink);color:#EDE7DA;border-radius:22px;padding:40px}
+.proof .kick{color:var(--orange2)}
+.proof h3{font-family:'Nunito';font-weight:900;font-size:26px;color:#fff;margin-bottom:14px}
+.proof p{color:#c9bfac;font-size:15.5px;max-width:70ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+.stat .n{font-family:'Nunito';font-weight:900;font-size:30px;color:var(--teal)}
+.stat .l{font-size:12.5px;color:#a99f8c}
+
+/* timeline */
+.tl{display:flex;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:12px}
+.tl .tn{flex:none;font-family:'Nunito';font-weight:900;color:#fff;background:var(--teal2);width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.tl h4{font-family:'Nunito';font-weight:800;font-size:16px;margin-bottom:3px}
+.tl p{font-size:14px;color:var(--soft)}
+.disclaim{font-size:12.5px;color:var(--faint);margin-top:16px;max-width:74ch}
+
+footer{background:var(--cream2);padding:46px 0;text-align:center;border:none}
+footer .brand{justify-content:center;margin-bottom:10px}
+footer p{font-size:14px;color:var(--soft)}
+.conf{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:14px}
+
+/* Ramped about / stats */
+.rstats{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.rstat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center}
+.rstat .n{font-family:'Nunito';font-weight:900;font-size:30px;color:var(--teal2);line-height:1}
+.rstat .l{font-size:12.5px;color:var(--soft);font-weight:600;margin-top:6px}
+.princ h3{display:flex;align-items:center;gap:9px}
+.princ .pi{font-size:22px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+@media(max-width:820px){.process{grid-template-columns:1fr 1fr}}
+.pstep{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.pstep .pn{font-family:'Nunito';font-weight:900;color:#fff;background:var(--teal2);width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;margin-bottom:10px}
+.pstep h4{font-family:'Nunito';font-weight:800;font-size:14.5px;margin-bottom:4px}
+.pstep p{font-size:12.5px;color:var(--soft)}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:12px}
+@media(max-width:820px){.logos{grid-template-columns:repeat(2,1fr)}}
+.lg{background:var(--card);border:1px solid var(--line);border-radius:14px;height:96px;display:flex;align-items:center;justify-content:center;padding:18px}
+.lg img{max-height:44px;max-width:78%;object-fit:contain;opacity:.85}
+
+/* infographic images */
+.infographic{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 20px 50px -30px rgba(69,65,58,.45);margin:0 0 10px}
+.hero .wrap.solo{display:block}
+.hero .wrap.solo .infographic{box-shadow:0 26px 60px -34px rgba(122,63,242,.35)}
+.hero .wrap.solo .metabar{margin-top:26px}
+section .kick + .infographic{margin-top:2px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav"><div class="wrap">
+  <div class="brand"><span class="ring"></span> RAMPED <span style="color:var(--faint);font-weight:700">×</span> Sweatcoin</div>
+  <div class="navlinks">
+    <a href="#opportunity">Opportunity</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#angles">Content</a>
+    <a href="#engine">Two Markets</a>
+    <a href="#markets">Pricing</a>
+    <a href="#offer">Our Offer</a>
+    <a href="#clients">Clients</a>
+  </div>
+</div></div>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap solo">
+  <img class="infographic" src="sweatcoin-hero.png" alt="Two markets, one creator growth engine for Sweatcoin — United States & United Kingdom">
+  <h1 style="margin-top:26px">Two markets, one <em>move-to-earn growth engine</em> for Sweatcoin.</h1>
+  <p>A measurable, creator-led acquisition system for the most demonstrable hook in fitness — get paid to walk — run natively in the United States and the United Kingdom.</p>
+  <div class="metabar">
+    <div><div class="n">190M+</div><div class="l">Sweatcoin users</div></div>
+    <div><div class="n">#1</div><div class="l">Health &amp; Fitness in 58 countries</div></div>
+    <div><div class="n">Views</div><div class="l">Guaranteed per campaign</div></div>
+    <div><div class="n">Month&nbsp;1</div><div class="l">50% off our fee</div></div>
+  </div>
+</div></header>
+
+<!-- WHO WE ARE -->
+<section id="aboutramped"><div class="wrap">
+  <div class="kick">Who We Are</div>
+  <h2>A performance influencer agency, <em>built for consumer apps.</em></h2>
+  <p class="lead">Founded in 2021, Ramped turns influencer marketing into a measurable, scalable acquisition channel — not a vanity-metrics exercise. We specialise in consumer and subscription apps, blending brand-building with hard performance metrics (CPA, CPI, ROAS). With a US office and teams across Spain, Portugal, Brazil and Argentina, we cast and run campaigns natively in each market — including the English-language creator scenes in the United States and the United Kingdom at the heart of this proposal.</p>
+  <div class="rstats">
+    <div class="rstat"><div class="n">1,000+</div><div class="l">Campaign activations</div></div>
+    <div class="rstat"><div class="n">50+</div><div class="l">Brand partners</div></div>
+    <div class="rstat"><div class="n">20+</div><div class="l">Markets reached</div></div>
+    <div class="rstat"><div class="n">91M+</div><div class="l">Views on client campaigns</div></div>
+    <div class="rstat"><div class="n">650+</div><div class="l">Creator collaborations</div></div>
+  </div>
+</div></section>
+
+<!-- HOW WE WORK -->
+<section id="howwework"><div class="wrap">
+  <div class="kick">How We Work</div>
+  <h2>We run it all. <em>You approve every step.</em></h2>
+  <p class="lead" style="margin-bottom:30px">A transparent, end-to-end process: you stay fully in control of the brand and the budget, without doing the legwork. In move-to-earn — where an overstated "get rich walking" claim is a real brand risk — message control sits at the centre of everything we do.</p>
+  <div class="grid g3 princ">
+    <div class="card"><h3><span class="pi">🤝</span>We represent you, not the creators</h3><p>We don't work with creators on an exclusive basis — we find the ones that fit <b>Sweatcoin</b> best in each market. We represent <b>Sweatcoin</b>, which means we're always negotiating the best possible deal <b>for you</b>: no exclusivity locks, no hidden markups buried in a creator's fee.</p></div>
+    <div class="card"><h3><span class="pi">🛡️</span>Honest earnings &amp; message control</h3><p>Move-to-earn attracts hype, and an exaggerated earnings claim is a real risk to the brand and to platform policy. <b>You approve every step</b>: the shortlist, the briefs, the script, the content and the posting timing. Nothing goes live without your sign-off — every creator shows realistic rewards and is briefed against your tone-of-voice and financial-claims guardrails.</p></div>
+    <div class="card"><h3><span class="pi">🎬</span>Pay only for the rights you use</h3><p>We negotiate paid-media usage rights into every deal so you can amplify the winners — but <b>you only pay to license the videos that actually perform</b> and are worth boosting. No blanket rights bill for content you won't run.</p></div>
+  </div>
+  <div class="process">
+    <div class="pstep"><div class="pn">1</div><h4>Strategy session</h4><p>We build the per-market plan with you — clear goals, KPIs and targets.</p></div>
+    <div class="pstep"><div class="pn">2</div><h4>Creator briefing</h4><p>Clear talking points, claims rules and creative guidelines for safe, high-quality content.</p></div>
+    <div class="pstep"><div class="pn">3</div><h4>Negotiations</h4><p>We secure optimised CPMs and paid-media rights — best value for you.</p></div>
+    <div class="pstep"><div class="pn">4</div><h4>Performance focus</h4><p>Lower-funnel campaigns with selected creators, driving installs and active users.</p></div>
+    <div class="pstep"><div class="pn">5</div><h4>Quality &amp; compliance review</h4><p>We review every asset for brand language, earnings claims and platform policy.</p></div>
+    <div class="pstep"><div class="pn">6</div><h4>Relationship management</h4><p>We handle all creator relationships so you can focus on your priorities.</p></div>
+    <div class="pstep"><div class="pn">7</div><h4>Optimisation &amp; insights</h4><p>Continuous optimisation plus clear reporting on every key outcome.</p></div>
+  </div>
+</div></section>
+
+<!-- OPPORTUNITY -->
+<section id="opportunity"><div class="wrap">
+  <div class="kick">01 · The Opportunity</div>
+  <img class="infographic" src="sweatcoin-opportunity.png" alt="Sweatcoin built the world's biggest move-to-earn app — the next growth is creator-led in the US and UK">
+  <h2>You built the world's biggest move-to-earn app. <em>The next chapter is creator-led.</em></h2>
+  <p class="lead" style="margin-bottom:28px">Walking is the most universal habit there is — and <b>Sweatcoin</b> turned it into something people want to talk about: you literally get paid to move. That's not an ad, it's a creator holding up their phone and showing the step count converting into <b>Sweatcoin</b>s, then redeeming them. <b>Sweatcoin</b> has 190M+ users and ranks #1 in Health &amp; Fitness in 58 countries, with the <b>Sweat</b> economy and marketplace built on top. What's missing in your two biggest English-speaking markets isn't product fit — it's the engine that turns "wait, this actually pays?" into trackable installs and active, walking users, run natively by local creators.</p>
+  <div class="grid g2" style="margin-bottom:24px">
+    <div>
+      <div class="card" style="margin-bottom:16px"><h3>Product-market fit is already massive</h3><p><b>Sweatcoin</b> works in the US and UK today — 190M+ users, a live marketplace and the <b>Sweat</b> wallet. That's the hard part, and it's done. The gap is distribution: putting the app in front of the audience through people they already trust, at the moment "get paid to walk" makes them stop scrolling.</p></div>
+      <div class="card"><h3>The most demonstrable hook in fitness</h3><p>No other health app can show its value in five seconds the way <b>Sweatcoin</b> can — steps in, currency out, rewards redeemed on camera. It's built for short-form. The category's biggest question, "is it actually legit?", is answered best not by you, but by a creator showing their own payout.</p></div>
+    </div>
+    <div class="plans">
+      <div class="plan p1"><span><small>Test &amp; prove — home market</small>🇬🇧 United Kingdom</span></div>
+      <div class="plan p2"><span><small>Scale — the biggest audience</small>🇺🇸 United States</span></div>
+    </div>
+  </div>
+  <div class="note"><b>Two markets we'd propose — pick either, or both.</b> The UK is <b>Sweatcoin</b>'s home market and the efficient place to prove the system in English fast; the US is the largest move-to-earn audience in the world and where the volume is. Because both speak English, a winning hook in one ports almost directly to the other (more on that below). Run one on its own, or combine them into a single learning system. And if you'd rather test a different country, we'll study it.</div>
+</div></section>
+
+<!-- STRATEGY -->
+<section id="strategy"><div class="wrap">
+  <div class="kick">02 · The Strategy</div>
+  <h2>Don't bet on one creator size. <em>Layer them.</em></h2>
+  <p class="lead" style="margin-bottom:30px">The most common mistake is spending a whole budget on one big name — or only on cheap nano creators. Each tier does a different job. Combined, they cover the full funnel: reach and credibility at the top, conversion in the middle, authenticity and volume at the base. We build this same pyramid in each market, casting locally across fitness, walking, running, student, money-saving and lifestyle niches.</p>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h4>Cast across tiers</h4><p>Ramped sources a mix of nano, micro and mid creators in fitness, walking, running, side-hustle and money-saving niches — native to each market, briefed for compliance.</p></div>
+    <div class="step"><div class="num">2</div><h4>Brief &amp; create</h4><p>Each creator lives a real <b>Sweatcoin</b> habit — hitting step goals, watching the balance grow, redeeming rewards on camera — and produces authentic content, with paid usage rights included.</p></div>
+    <div class="step"><div class="num">3</div><h4>Concentrated launch</h4><p>Creators post in the same window. The install spike lifts App Store ranking in Health &amp; Fitness — extra organic installs on top.</p></div>
+    <div class="step"><div class="num">4</div><h4>Amplify winners</h4><p>Top organic videos are boosted as paid ads. You spend media budget only on creative already proven to convert.</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:24px">
+    <div class="card"><h3>Why combine sizes (and not just go big)</h3><p>A single big creator gives you one shot, one audience, one CPM. Ten layered creators give you ten audiences, ten content angles to test, and a portfolio that de-risks the campaign. If one underperforms, the budget moves — you're never all-in on a single bet.</p></div>
+    <div class="card"><h3>Why layering drives more reach</h3><p>Mid-tier fitness and lifestyle voices create the awareness wave and credibility; micro creators deliver the best engagement and lowest cost per install; nano creators add authentic volume and tight-knit walking and money-saving communities. People who see the same app from several creators they trust convert far better than from one big post.</p></div>
+  </div>
+</div></section>
+
+<!-- CREATOR MIX -->
+<section id="mix"><div class="wrap">
+  <div class="kick">03 · The Creator Mix</div>
+  <img class="infographic" src="sweatcoin-pyramid.png" alt="A pyramid, not a billboard — each creator tier does a different job">
+  <h2>A pyramid, <em>not a billboard.</em></h2>
+  <p class="lead" style="margin-bottom:30px">This is the target shape per market. Exact counts and fees are confirmed once we scout each market — but the logic stays the same: a wide, efficient, authentic base, a strong converting middle, and a few larger, credible names for reach and trust.</p>
+
+  <div class="tier">
+    <div class="bar" style="width:120px;background:var(--teal)">MID-TIER<br>100k–500k</div>
+    <div class="meta"><div class="role">Reach &amp; credibility</div><h4>The Trust Anchor — 1–2 creators</h4><p>Big awareness wave and instant credibility. A well-known fitness or lifestyle creator tells the audience "this is the app I actually use to get paid for my steps." Highest cost, lowest volume — used sparingly to anchor the launch.</p></div>
+  </div>
+  <div class="tier">
+    <div class="bar" style="width:150px;background:var(--orange)">MICRO<br>50k–100k</div>
+    <div class="meta"><div class="role">The conversion workhorse</div><h4>The Performance Core — 3–4 creators</h4><p>The best balance of reach, trust and cost per install. Engaged fitness, walking and money-saving audiences with real intent. This is where most installs and active <b>Sweatcoin</b> users come from.</p></div>
+  </div>
+  <div class="tier">
+    <div class="bar" style="width:185px;background:var(--plum)">NANO<br>10k–50k</div>
+    <div class="meta"><div class="role">Authenticity &amp; volume</div><h4>The Community Layer — 5–7 creators</h4><p>Cheapest cost per install, highest authenticity. "A friend who actually gets it." Drives word-of-mouth inside walking, student and side-hustle communities and produces a large, cheap content library to test angles and feed paid ads.</p></div>
+  </div>
+</div></section>
+
+<!-- CONTENT ANGLES -->
+<section id="angles"><div class="wrap">
+  <div class="kick">04 · Content Angles</div>
+  <h2>Six hypotheses. <em>One launch to find the winner.</em></h2>
+  <p class="lead" style="margin-bottom:30px">We spread the brief across angles, then let data pick the message that drives installs. Paid media scales the one that wins. Each angle is localised — the hook that works in London isn't always the one that works in Los Angeles — and every script is run through your compliance guardrails.</p>
+  <div class="grid g2" style="align-items:start;margin-bottom:24px">
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="angle"><div class="az">A</div><h4>"You get paid to walk?!"</h4><p><b>Sweatcoin</b>'s signature moment: a creator shows their step count converting into <b>Sweatcoin</b>s in real time. A scroll-stopping reveal that sells the product in five seconds — the hook no other fitness app can copy.</p><div class="quote">"I've been walking for free my whole life… turns out I could've been getting paid."</div></div>
+      <div class="angle"><div class="az">B</div><h4>"What I earned just by walking"</h4><p>The most repeatable format in the category. Creators log a week of steps and show exactly what the balance became — endlessly repeatable, endlessly searchable, perfect for a series.</p><div class="quote">"7 days, 78,000 steps — here's what Sweatcoin actually paid me."</div></div>
+      <div class="angle"><div class="az">C</div><h4>"Is Sweatcoin actually legit?"</h4><p>The category's #1 search, answered by the audience's own kind. A skeptic-to-believer arc: the creator tests it, hits payout and shows the redemption. Nothing builds trust like proof from someone who doubted it.</p><div class="quote">"I thought it was a scam. Then I redeemed my first reward. Watch."</div></div>
+      <div class="angle"><div class="az">D</div><h4>The rewards haul</h4><p>The aspirational hook: a creator redeems <b>Sweatcoin</b>s in the marketplace and unboxes what they got — gift cards, gear, offers. Turns an abstract balance into something tangible and shareable.</p><div class="quote">"Everything I got this month without spending a penny — just steps."</div></div>
+    </div>
+    <div class="stages">
+      <div style="font-family:'Nunito';font-weight:900;font-size:16px;margin-bottom:10px">In-app building blocks — the content writes itself</div>
+      <div class="stage"><span class="ic">👟</span><div class="t"><b>Steps → Sweatcoins</b><span>Walk, earn, watch it climb</span></div><span class="h">Wow</span></div>
+      <div class="stage"><span class="ic">🛒</span><div class="t"><b>Rewards marketplace</b><span>Redeem for gift cards &amp; gear</span></div><span class="h">Aha</span></div>
+      <div class="stage k"><span class="ic">✅</span><div class="t"><b>Real payouts</b><span>Proof it actually pays</span></div><span class="h">Trust</span></div>
+      <div class="stage"><span class="ic">⚡</span><div class="t"><b>2× daily boosts &amp; offers</b><span>Earn faster, come back daily</span></div><span class="h">Habit</span></div>
+      <div class="stage a"><span class="ic">💧</span><div class="t"><b>Sweat wallet &amp; token</b><span>The Sweat economy on top</span></div><span class="h">Depth</span></div>
+      <div class="stage a"><span class="ic">🏆</span><div class="t"><b>Friend invites &amp; challenges</b><span>Step battles, viral loops</span></div><span class="h">Social</span></div>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div class="angle"><div class="az">E</div><h4>Free motivation to hit 10k</h4><p>The health hook: the reward is the nudge that finally makes walking stick. A creator shows how getting paid turned "I should move more" into a daily streak — steps up, mood up, balance up.</p><div class="quote">"The only thing that got me to 10k steps a day — and it pays me for it."</div></div>
+    <div class="angle"><div class="az">F</div><h4>The step challenge</h4><p>The social hook: creators dare their followers or each other to a step battle, invites flying, everyone earning. Built-in virality that turns one post into a community loop.</p><div class="quote">"Me vs my group chat: whoever walks the most this week wins. Join us."</div></div>
+  </div>
+</div></section>
+
+<!-- TWO MARKETS, ONE SYSTEM (signature idea) -->
+<section id="engine"><div class="wrap">
+  <div class="kick">05 · The Original Idea</div>
+  <img class="infographic" src="sweatcoin-engine.png" alt="Two markets aren't two campaigns. They're one engine — learning compounds across the US and UK">
+  <h2>Two markets aren't two campaigns. <em>They're one engine.</em></h2>
+  <p class="lead" style="margin-bottom:24px">Here's the move most agencies miss. The US and UK share a language and the same buyer — someone who'd happily be paid to do what they already do. So the winning hooks, the strongest creator formats and the Spark-ready UGC don't stay in one market. We treat the two as a single learning system: each market plays a role, and the creative learning compounds across both.</p>
+  <div class="grid g2" style="margin-bottom:24px">
+    <div class="card"><h3>🇬🇧 Test &amp; prove in the UK</h3><p><b>Sweatcoin</b>'s home market and the efficient place to prove the system in English fast. The UK generates the first winning hooks and an English-language content library that ports straight to the US.</p></div>
+    <div class="card"><h3>🇺🇸 Scale in the US</h3><p>The largest move-to-earn audience in the world — the market where the volume is. The English creative proven in the UK lands here almost directly, so more budget goes to reach, not production.</p></div>
+  </div>
+  <div class="note orange"><b>The result: learning compounds across borders.</b> This is what's <em>possible</em> as you add the second market — not a requirement. Start with one; if you add the other later, the UK de-risks the US, the US brings scale, and one performance-tested UGC library serves them both. You learn faster, and you only put paid budget behind creative that's already proven to convert.</div>
+</div></section>
+
+<!-- WHY 3 MONTHS -->
+<section id="why3"><div class="wrap">
+  <div class="kick">06 · Why 3 Months</div>
+  <img class="infographic" src="sweatcoin-flywheel.png" alt="One month buys data. Three months buy results — Test, Reallocate, Scale">
+  <h2>One month buys data. <em>Three months buy results.</em></h2>
+  <p class="lead" style="margin-bottom:14px">A single month can't tell you who your best creators are — you find out as the data comes in. The 3-month system turns that learning into compounding efficiency: spread, then reallocate, then scale the winners. The same curve repeats in every market.</p>
+  <div class="note" style="margin-bottom:30px"><b>How to read the charts:</b> each donut shows how budget is split across creators — <b style="color:#6320D6">Outstanding</b>, <b style="color:#C86A17">Good</b>, <b>Slow</b>, <b>Bad</b>. The purple centre number is the budget going to your <em>best</em> creators; the figure underneath is the share of new <em>installs</em> they drive. Watch the budget concentrate as results climb.</div>
+
+  <div class="months">
+    <div class="mcard">
+      <div class="mh">Month 1 — Learn</div>
+      <div class="ms">Budget spread evenly. We don't know the winners yet.</div>
+      <div class="donut">
+        <svg width="160" height="160" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#7A3FF2" stroke-width="22" stroke-dasharray="84.45 267.41" transform="rotate(-90.00 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#F68237" stroke-width="22" stroke-dasharray="98.52 253.34" transform="rotate(-3.60 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#CFC6B2" stroke-width="22" stroke-dasharray="56.30 295.56" transform="rotate(97.20 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#45413A" stroke-width="22" stroke-dasharray="112.59 239.26" transform="rotate(154.80 70 70)"/>
+        </svg>
+        <div class="dc"><b>24%</b><span>budget to top creators</span></div>
+      </div>
+      <div class="out"><b>64%</b>of installs already come from the top creators</div>
+    </div>
+    <div class="mcard">
+      <div class="mh">Month 2 — Reallocate</div>
+      <div class="ms">Shift spend toward proven performers. Cut the losers.</div>
+      <div class="donut">
+        <svg width="160" height="160" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#7A3FF2" stroke-width="22" stroke-dasharray="123.15 228.71" transform="rotate(-90.00 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#F68237" stroke-width="22" stroke-dasharray="105.56 246.30" transform="rotate(36.00 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#CFC6B2" stroke-width="22" stroke-dasharray="42.22 309.64" transform="rotate(144.00 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#45413A" stroke-width="22" stroke-dasharray="80.93 270.93" transform="rotate(187.20 70 70)"/>
+        </svg>
+        <div class="dc"><b>35%</b><span>budget to top creators</span></div>
+      </div>
+      <div class="out"><b>69%</b>of installs from the top creators</div>
+    </div>
+    <div class="mcard">
+      <div class="mh">Month 3 — Scale</div>
+      <div class="ms">Concentrate budget on the winners. Efficiency peaks.</div>
+      <div class="donut">
+        <svg width="160" height="160" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#7A3FF2" stroke-width="22" stroke-dasharray="182.97 168.89" transform="rotate(-90.00 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#F68237" stroke-width="22" stroke-dasharray="105.56 246.30" transform="rotate(97.20 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#CFC6B2" stroke-width="22" stroke-dasharray="45.74 306.12" transform="rotate(205.20 70 70)"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#45413A" stroke-width="22" stroke-dasharray="17.59 334.27" transform="rotate(252.00 70 70)"/>
+        </svg>
+        <div class="dc"><b>52%</b><span>budget to top creators</span></div>
+      </div>
+      <div class="out"><b>77%</b>of installs from the top creators</div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--out)"></span>Outstanding</span>
+    <span><span class="dot" style="background:var(--good)"></span>Good</span>
+    <span><span class="dot" style="background:var(--slow)"></span>Slow</span>
+    <span><span class="dot" style="background:var(--bad)"></span>Bad</span>
+  </div>
+  <div class="note" style="margin-top:26px"><b>The portfolio gives you the data. The data gives you the criteria. The system gives you scale.</b> By Month 3, more than half the budget sits behind creators we've proven convert — and cost per install drops month over month. That compounding is impossible in a one-off campaign.</div>
+</div></section>
+
+<!-- GUARANTEE & TERMS -->
+<section id="guarantee"><div class="wrap">
+  <div class="kick">07 · Guarantee &amp; Terms</div>
+  <h2>The risk sits with us, <em>not with you.</em></h2>
+  <p class="lead" style="margin-bottom:30px">This is what makes the model safe to try in any market: you don't pre-fund anything, you only pay for work that actually goes live, and every campaign carries a guaranteed view commitment.</p>
+  <div class="guar">
+    <div class="gcard fire">
+      <span class="gi">🔥</span>
+      <h3>Guaranteed views</h3>
+      <ul>
+        <li>We agree a <b>minimum number of views</b> per campaign up front — so performance is committed, not hoped for.</li>
+        <li>If a creator's content <b>doesn't hit the agreed views</b>, we reshoot or repost until it does.</li>
+        <li>If it still falls short, <b>you don't pay for that creator.</b> The view floor protects your spend.</li>
+        <li>Guaranteed views give you a known reach baseline to plan installs and active users around.</li>
+      </ul>
+    </div>
+    <div class="gcard">
+      <span class="gi">🧾</span>
+      <h3>How you pay — no upfront risk</h3>
+      <ul>
+        <li><b>Invoiced at the end of each month</b> — never before.</li>
+        <li>You only pay for <b>content that has actually been published.</b> Posts that don't go live aren't billed.</li>
+        <li><b>No advance payment, no deposit.</b> Ramped fronts and manages the creator commitments.</li>
+        <li>Monthly cycle means you can review performance before continuing into the next month — per market.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========================= THE TWO MARKETS ========================= -->
+<section id="markets" style="background:var(--cream2)"><div class="wrap">
+  <div class="kick">08 · The Two Markets</div>
+  <h2>Pick your play. <em>Each one priced and ready.</em></h2>
+  <p class="lead" style="margin-bottom:20px">These are the two markets <b>we've proposed</b> because we think they can work for <b>Sweatcoin</b> — but this is a menu, not a bundle. Each is a self-contained 3-month program, priced on its own below.</p>
+  <div class="note" style="margin-bottom:24px"><b>Our recommendation, your call.</b> Start with the single market you like most, add the second whenever you're ready — or tell us another country you'd rather we study, and we'll build that plan. There's no obligation to run both.</div>
+  <table>
+    <thead><tr><th>Market</th><th>Role</th><th class="n">Est. CPM</th><th class="n">Working budget / mo</th><th class="n">Est. views / mo</th><th class="n">Reach per 1k</th><th class="n">All-in / mo</th></tr></thead>
+    <tbody>
+      <tr><td>🇬🇧 United Kingdom</td><td>Test &amp; prove</td><td class="n">£28</td><td class="n">£16,000</td><td class="n">~571K</td><td class="n">35,700</td><td class="n">£20,000</td></tr>
+      <tr><td>🇺🇸 United States</td><td>Scale the audience</td><td class="n">$35</td><td class="n">$20,000</td><td class="n">~571K</td><td class="n">28,600</td><td class="n">$25,000</td></tr>
+    </tbody>
+  </table>
+  <p class="disclaim">All-in / month = working budget + 25% Ramped management fee. CPMs are Ramped estimates based on category experience, to be confirmed in scouting; the agreed CPM is set per creator before launch. Reach is modelled as (working budget ÷ CPM) × 1,000 and is an estimate, not a guarantee; the guaranteed-views floor is agreed per campaign. Each market is priced in its own currency. Month 1 management fee is 50% off in every market — see Our Offer.</p>
+
+  <div class="barwrap" style="margin-top:26px">
+    <h4>Estimated views over the 3-month program</h4>
+    <div class="bchart">
+      <div class="bcol"><div class="bb" style="height:100%;background:var(--teal2)">~1.7M</div><div class="bl">🇬🇧 United Kingdom</div><div class="bs">£16k/mo · £28 CPM</div></div>
+      <div class="bcol"><div class="bb" style="height:100%;background:var(--orange)">~1.7M</div><div class="bl">🇺🇸 United States</div><div class="bs">$20k/mo · $35 CPM</div></div>
+    </div>
+    <p class="disclaim">Each market is a standalone 3-month program — pick one to start, or add the second whenever you're ready. Estimates, not guarantees.</p>
+  </div>
+</div></section>
+
+<!-- UNITED KINGDOM -->
+<section id="uk"><div class="wrap">
+  <div class="mkt-hd"><span class="fg">🇬🇧</span><div><div class="role" style="color:var(--teal2)">Market 1 · Test &amp; prove</div><h2>United Kingdom — prove the system on home turf.</h2></div></div>
+  <p class="lead" style="margin-bottom:8px">The UK is <b>Sweatcoin</b>'s home market — the most brand-aware audience of the two and an efficient place to prove the model in English before scaling. Fitness, walking, money-saving and side-hustle content is one of the biggest lanes on UK TikTok and Reels, and getting paid to walk is a natural fit for it. That makes it the ideal place to prove the system fast, efficiently and with full control. We cast UK-native creators across fitness, walking, running and money-saving niches.</p>
+  <div class="mkstat">
+    <div class="b"><div class="n" style="color:var(--teal2)">£28</div><div class="l">Est. CPM</div></div>
+    <div class="b"><div class="n" style="color:var(--teal2)">£16,000</div><div class="l">Working budget / mo</div></div>
+    <div class="b"><div class="n" style="color:var(--teal2)">~571K</div><div class="l">Est. views / mo</div></div>
+    <div class="b"><div class="n" style="color:var(--teal2)">~1.7M</div><div class="l">Est. views over 3 mo</div></div>
+  </div>
+  <div class="grid g2" style="align-items:start">
+    <div class="opt" style="border-color:var(--teal)">
+      <span class="badge">🇬🇧 UK · 3 months</span>
+      <h3>Sweatcoin Growth Engine — UK</h3>
+      <div class="mkt">Test &amp; prove</div>
+      <div class="price">£20,000 <small>/ month all-in</small></div>
+      <div class="total">£16,000 working budget + £4,000 Ramped fee (25%). Standard 3-month total <b>£60,000</b>.</div>
+      <div class="total" style="margin-top:6px;color:var(--ink);font-weight:700">With Month 1 fee 50% off: <b>£58,000</b> <span class="savetag">save £2,000</span></div>
+      <ul>
+        <li><b>£16,000</b> working budget — creator fees, usage rights, promo codes, tracking links</li>
+        <li><b>+ 25% Ramped fee (£4,000/mo)</b> — casting, strategy, briefing, compliance review, negotiation, weekly reporting</li>
+        <li>UK-native layered roster: nano + micro + mid-tier</li>
+        <li><b>Month 1 management fee = 50% off</b> (our offer)</li>
+        <li><b>Guaranteed views</b>; billed month-end, only for published content</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:16px"><h3>Why start in the UK</h3><p>Home market, most brand-aware audience and an English-language creative library that ports straight to the US. You see real creators, real content and real installs before committing to the bigger US market.</p></div>
+      <div class="card"><h3>What we'd test here first</h3><p>The "you get paid to walk?!" reveal and "what I earned just by walking", alongside the "is it legit?" skeptic proof. Winning UK creative becomes the launch kit for the US.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- UNITED STATES -->
+<section id="us"><div class="wrap">
+  <div class="mkt-hd"><span class="fg">🇺🇸</span><div><div class="role" style="color:var(--orange)">Market 2 · Scale the audience</div><h2>United States — the biggest move-to-earn audience there is.</h2></div></div>
+  <p class="lead" style="margin-bottom:8px">The US is the largest move-to-earn and rewards audience in the world, with a social culture built around fitness, side-hustles and "free money" content — exactly where <b>Sweatcoin</b> belongs. It's also where the winning English creative from the UK lands almost directly, so more of the budget goes to reach rather than production. We cast US-native creators across fitness, walking, running, student and money-saving niches.</p>
+  <div class="mkstat">
+    <div class="b"><div class="n" style="color:var(--orange)">$35</div><div class="l">Est. CPM</div></div>
+    <div class="b"><div class="n" style="color:var(--orange)">$20,000</div><div class="l">Working budget / mo</div></div>
+    <div class="b"><div class="n" style="color:var(--orange)">~571K</div><div class="l">Est. views / mo</div></div>
+    <div class="b"><div class="n" style="color:var(--orange)">~1.7M</div><div class="l">Est. views over 3 mo</div></div>
+  </div>
+  <div class="grid g2" style="align-items:start">
+    <div class="opt" style="border-color:var(--orange)">
+      <span class="badge" style="background:var(--orange)">🇺🇸 US · 3 months</span>
+      <h3>Sweatcoin Growth Engine — US</h3>
+      <div class="mkt">Scale the audience</div>
+      <div class="price">$25,000 <small>/ month all-in</small></div>
+      <div class="total">$20,000 working budget + $5,000 Ramped fee (25%). Standard 3-month total <b>$75,000</b>.</div>
+      <div class="total" style="margin-top:6px;color:var(--ink);font-weight:700">With Month 1 fee 50% off: <b>$72,500</b> <span class="savetag">save $2,500</span></div>
+      <ul>
+        <li><b>$20,000</b> working budget — creator fees, usage rights, promo codes, tracking links</li>
+        <li><b>+ 25% Ramped fee ($5,000/mo)</b> — casting, strategy, briefing, compliance review, negotiation, weekly reporting</li>
+        <li>US-native layered roster: nano + micro + mid-tier</li>
+        <li><b>Month 1 management fee = 50% off</b> (our offer)</li>
+        <li><b>Guaranteed views</b>; billed month-end, only for published content</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:16px"><h3>Why the US scales</h3><p>The biggest audience of the two, in a market that lives on fitness and "free money" content. The English content library from the UK ports here with minimal rework — so more budget goes to reach, not production.</p></div>
+      <div class="card"><h3>What we'd test here first</h3><p>The winners from the UK go first — the "get paid to walk" reveal and the rewards haul — re-cast with US-native creators, plus locally relevant step-challenge and side-hustle content.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- OUR OFFER -->
+<section id="offer"><div class="wrap">
+  <div class="kick">09 · Our Offer</div>
+  <h2>We want to work with Sweatcoin. <em>So we're putting skin in the game.</em></h2>
+  <p class="lead" style="margin-bottom:26px">To make starting easy, we're taking <b>50% off the Ramped management fee for the first month</b> — in whichever market(s) you choose. Your working budget is untouched and drives the campaign in full; we're simply halving our own fee that month while you judge the results.</p>
+  <div class="offer" style="margin-bottom:26px">
+    <div class="big">50% off<small>Month 1 Ramped fee</small></div>
+    <div>
+      <h3>Half our management fee, gone, for the first month.</h3>
+      <p>It means you can see real creators, real content and real reach before you pay us full fee. The working budget still funds the campaign in full — we're simply cutting our own fee in half while you judge the results.</p>
+    </div>
+  </div>
+  <table>
+    <thead><tr><th>Market</th><th class="n">Standard 3-mo</th><th class="n">With Month 1 fee 50% off</th><th class="n">You save</th></tr></thead>
+    <tbody>
+      <tr><td>🇬🇧 United Kingdom</td><td class="n">£60,000</td><td class="n">£58,000</td><td class="n">£2,000</td></tr>
+      <tr><td>🇺🇸 United States</td><td class="n">$75,000</td><td class="n">$72,500</td><td class="n">$2,500</td></tr>
+    </tbody>
+  </table>
+  <p class="disclaim">Month 1 offer applies to the Ramped management fee only (halved that month); the working budget is unaffected and still funds the campaign in full. Standard totals assume the full fee applies in all three months. Each market is priced in its own currency, billed at month-end, only for published content.</p>
+</div></section>
+
+<!-- PROOF -->
+<section><div class="wrap">
+  <div class="proof">
+    <div class="kick">10 · Proof It Works</div>
+    <h3>We've run this exact playbook — for a subscription health app.</h3>
+    <p>For <b>Flo</b>, a leading health app, Ramped launched a market via influencer marketing built entirely on UGC from micro and nano creators, every asset produced for paid amplification — the same model proposed here. The daily-revenue and ROAS results below are from that campaign. We also run creator campaigns for <b>Ada Health</b>, a sensitive, trust-first medical product — the same discipline of message control and honest claims that move-to-earn content demands.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">2.2×</div><div class="l">Daily revenue vs. baseline</div></div>
+      <div class="stat"><div class="n">3×</div><div class="l">ROAS on the campaign</div></div>
+      <div class="stat"><div class="n">$63K</div><div class="l">Incremental revenue</div></div>
+      <div class="stat"><div class="n">88%</div><div class="l">Videos past 50K views</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- TRUSTED BY -->
+<section id="clients"><div class="wrap">
+  <div class="kick">Trusted By</div>
+  <h2>The brands that <em>got Ramped.</em></h2>
+  <p class="lead" style="margin-bottom:8px">From global names like Audible and Johnson's to leading health apps like Ada Health — Ramped drives acquisition for brands that live or die by performance, in categories where trust is everything.</p>
+  <div class="logos">
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63fdf9bd91b911d284472061_1280px-Audible_logo.svg.png" alt="Audible"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63fdfc140b0316805732140f_johnsons-logo-vector.png" alt="Johnson's"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63fe43ea16b231d86b0c5c6f_Ada-Health.png" alt="Ada Health"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63ebd18dd6635b31cb000fd8_61640879750b6b2decd6f090_jodel_new_vertical_logo_orange-p-500.png" alt="Jodel"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63fdf9bd914bbf77cc1c956a_5f7a480ea19c761bd271c175_rainbow%20%2B%20black%20Aura%20text.png" alt="Aura"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63e6e6b5476e8d1c31ffd06f_ABA_NewLogo_Horizontal_200x60_2x.webp" alt="ABA English"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/63fe43eaddeb9bbb6f0fa5c3_Tandem_logo.png" alt="Tandem"></div>
+    <div class="lg"><img src="https://cdn.prod.website-files.com/63e6cff48b0aad610d9d828c/67486261f3637a2be70bbd29_MODO%20(PRINCIPAL)%20Primary%20Default.png" alt="MODO"></div>
+  </div>
+  <p class="disclaim">Selected client logos. Full case references available on request.</p>
+</div></section>
+
+<!-- NEXT STEPS -->
+<section id="next"><div class="wrap">
+  <div class="kick">11 · Next Steps</div>
+  <h2>Briefed and casting <em>within two weeks.</em></h2>
+  <div style="margin-top:26px">
+    <div class="tl"><div class="tn">1</div><div><h4>Choose your market</h4><p>Start with one of the two we've proposed — the UK or the US — and add the second only if and when you want to. Prefer a different country? We'll study it and build the plan. Each option is priced and ready, with Month 1 fee 50% off.</p></div></div>
+    <div class="tl"><div class="tn">2</div><div><h4>Share app access &amp; guardrails</h4><p>Access for briefing, plus tone of voice, earnings-claims rules and the compliance guidelines we must brief every creator against.</p></div></div>
+    <div class="tl"><div class="tn">3</div><div><h4>Align on tracking</h4><p>We set up attribution with whatever MMP you use (Adjust, AppsFlyer, Singular) — or, if there's none in place, with promo codes, unique links and store analytics. Nothing assumed.</p></div></div>
+    <div class="tl"><div class="tn">4</div><div><h4>Approve the creator shortlist</h4><p>Ramped presents candidates across all tiers, native to each market. You confirm the final roster before any outreach.</p></div></div>
+    <div class="tl"><div class="tn">5</div><div><h4>Launch Month 1 &amp; report</h4><p>Concentrated launch, weekly performance snapshots, then reallocate into Month 2 and scale the winners in Month 3.</p></div></div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="brand"><span class="ring"></span> RAMPED <span style="color:var(--faint)">×</span> Sweatcoin</div>
+  <p>David Cremades · <a href="mailto:david@getramped.com">david@getramped.com</a> · <a href="https://getramped.com">getramped.com</a></p>
+  <p class="conf">RAMPED × Sweatcoin · United States · United Kingdom · Confidential © 2026</p>
+</footer>
+
+</body>
+</html>
